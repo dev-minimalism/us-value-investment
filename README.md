@@ -16,3 +16,12 @@ pip freeze > requirements.txt
 crontab -e
 0 11 * * * ~/code/value-investment/venv/bin/python ~/code/value-investment/main.py
 ```
+
+### Test Google Sheets mode:
+```
+nohup python main.py --mode sheets > output_file/logs/nohup.out 2>&1 &
+```
+### Test monitoring mode:
+```
+nohup python main.py --mode monitor > output_file/logs/nohup.out 2>&1 &
+```
