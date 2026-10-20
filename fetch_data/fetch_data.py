@@ -52,6 +52,8 @@ def get_sp500_top200_tickers():
 def get_financial_data(ticker):
   stock = yf.Ticker(ticker)
   info = stock.info
+  # yfinance는 debtToEquity를 퍼센트로 반환 (예: 150 → 1.5배) → 비율로 변환
+  de_pct = info.get('debtToEquity')
   try:
     return {
       'ticker': ticker,
@@ -60,7 +62,7 @@ def get_financial_data(ticker):
       'pe': info.get('trailingPE'),
       'pb': info.get('priceToBook'),
       'roe': info.get('returnOnEquity'),
-      'de_ratio': info.get('debtToEquity'),
+      'de_ratio': de_pct / 100 if de_pct is not None else None,
     }
   except:
     return None
