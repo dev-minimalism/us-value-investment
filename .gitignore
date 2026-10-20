@@ -3,3 +3,5 @@
 /.idea/
 /output_file/
 /secret/
+__pycache__/
+*.pyc

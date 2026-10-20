@@ -44,5 +44,4 @@ The two modes are separate processes. They communicate only through files on dis
 - yfinance's `debtToEquity` is a percentage (e.g. `150` means 1.5×). `get_financial_data()` divides it by 100, so `de_ratio` (in the Excel output too) and `DE_THRESHOLD` are both plain ratios.
 - `fetch_data` writes `sp500_top200_by_marketcap.csv` to `./output_file`, relative to the **working directory**. `main.py` resolves `output_file` relative to the **script directory**. These two paths differ when the script runs from another cwd, as it does under cron.
 - `is_us_market_open()` hard-codes 22:30–05:00 KST, which does not adjust for US daylight saving time.
-- `.gitignore` does not cover `__pycache__/`, and some `.pyc` files are already committed.
 - Code style: 2-space indentation, and absolute package imports from the repo root (e.g. `from config.config import ...`). Run scripts from the repo root.
