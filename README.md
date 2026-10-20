@@ -1,9 +1,10 @@
+# US Value Investment
+
 [![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![yfinance](https://img.shields.io/badge/yfinance-410093)](https://pypi.org/project/yfinance/)
 [![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?logo=googlesheets&logoColor=white)](https://developers.google.com/sheets/api)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)](https://core.telegram.org/bots)
-
-# US Value Investment
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 S&P 500 시가총액 상위 200개 종목을 가치투자 기준으로 평가해 매수/매도/보유 시그널을 생성하고,
 결과를 Google Sheets에 업로드하며 Telegram으로 알림을 보내는 스크립트입니다.
@@ -90,3 +91,7 @@ valuation/       # 내재가치 계산
 signaler/        # BUY/SELL/HOLD 판단
 google_sheet/    # Google Drive 업로드 및 Sheets 변환
 ```
+
+## 라이선스
+
+[MIT](LICENSE)
